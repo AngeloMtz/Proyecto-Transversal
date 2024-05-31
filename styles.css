@@ -1,0 +1,251 @@
+/* styles.css */
+
+/* Reset de estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ddd;
+}
+
+/* Encabezado fijo */
+header {
+    background:linear-gradient(rgb(74, 74, 73), rgb(53, 52, 52));
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    font-size: 1.2rem;
+}
+
+header .logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Para compensar el espacio del header fijo */
+body::before {
+    content: "";
+    display: block;
+    height: 100px; /* Ajusta esta altura según la altura de tu header */
+}
+
+.banner-principal {
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: #000000;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px; /* Ajusta esta altura según la altura de tu header */
+}
+
+.banner-principal .banner-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.banner-principal .busqueda-rapida {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-principal .busqueda-rapida input,
+.banner-principal .busqueda-rapida button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.banner-principal .busqueda-rapida input {
+    flex: 1;
+    min-width: 150px;
+}
+
+.banner-principal .busqueda-rapida button {
+    background: #f90;
+    color: #fff;
+    cursor: pointer;
+}
+
+.banner-principal .busqueda-rapida button:hover {
+    background: #e80;
+}
+
+section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.propiedades-destacadas .carrusel,
+.agentes-inmobiliarios .agentes,
+.recursos-blog .articulos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.propiedades-destacadas .propiedad,
+.agentes-inmobiliarios .agente,
+.recursos-blog .articulo {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background: #fff;
+    width: 300px;
+}
+
+.propiedades-destacadas .propiedad img,
+.agentes-inmobiliarios .agente img,
+.recursos-blog .articulo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.propiedades-destacadas .propiedad p,
+.agentes-inmobiliarios .agente p,
+.recursos-blog .articulo p {
+    margin: 10px 0;
+}
+
+.propiedades-destacadas .propiedad a,
+.agentes-inmobiliarios .agente a,
+.recursos-blog .articulo a {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.propiedades-destacadas .propiedad a:hover,
+.agentes-inmobiliarios .agente a:hover,
+.recursos-blog .articulo a:hover {
+    background: #555;
+}
+
+.busqueda-avanzada form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.busqueda-avanzada form input,
+.busqueda-avanzada form select,
+.busqueda-avanzada form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.busqueda-avanzada form button {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.busqueda-avanzada form button:hover {
+    background: #555;
+}
+
+.mapa-interactivo #mapa {
+    width: 100%;
+    height: 500px;
+    background: #ccc; /* Este color se eliminará cuando el mapa esté integrado */
+}
+
+.llamada-accion {
+    background: #f90;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+.llamada-accion h2 {
+    margin-bottom: 20px;
+}
+
+.llamada-accion .btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.llamada-accion .btn:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer .enlaces-rapidos a,
+footer .informacion-contacto a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .enlaces-rapidos a:hover,
+footer .informacion-contacto a:hover {
+    text-decoration: underline;
+}
+
+footer .redes-sociales img {
+    width: 30px;
+    margin: 0 10px;
+    filter: invert(100%);
+}
